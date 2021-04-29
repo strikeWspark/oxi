@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="buttonRadius">16dp</dimen>
+    <dimen name="margin">12dp</dimen>
+    <dimen name="padding">4dp</dimen>
+    <dimen name="title_text">40sp</dimen>
+</resources>

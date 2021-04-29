@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textbox">40dp</dimen>
+    <dimen name="cardTitleText">22sp</dimen>
+</resources>

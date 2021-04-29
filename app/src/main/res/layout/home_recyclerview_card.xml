@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="@dimen/padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/oxi_cardHome_shopName"
+            android:textSize="@dimen/cardTitleText"
+            android:textColor="@color/cardview_dark_background"
+            android:text="Shop Name: Oxi Cylinders"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/oxi_cardHome_available"
+            android:textSize="@dimen/cardTitleText"
+            android:layout_below="@+id/oxi_cardHome_shopName"
+            android:textColor="@color/cardview_dark_background"
+            android:text="Available: 23 Units"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"/>
+
+        <com.razerdp.widget.animatedpieview.AnimatedPieView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/oxi_cardHome_shopName"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_alignParentRight="true"
+            android:id="@+id/oxu_probability_piechart"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/oxi_cardHome_pricePerUnit"
+            android:layout_below="@+id/oxi_cardHome_available"
+            android:textSize="@dimen/cardTitleText"
+            android:textColor="@color/cardview_dark_background"
+            android:text="Price: 1500/-"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/oxi_cardHome_mobile"
+            android:layout_below="@+id/oxi_cardHome_pricePerUnit"
+            android:layout_alignParentLeft="true"
+            android:text="call"
+            app:cornerRadius="@dimen/buttonRadius"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

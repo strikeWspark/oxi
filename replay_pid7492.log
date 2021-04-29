@@ -1,0 +1,61 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 382 ciObject found
+ciMethod java/lang/Object <init> ()V 4097 1 982193 0 0
+ciMethod java/lang/Object clone ()Ljava/lang/Object; 2049 1 256 0 -1
+ciMethod java/lang/Class isAssignableFrom (Ljava/lang/Class;)Z 2049 1 256 0 -1
+ciMethod java/lang/Class isArray ()Z 3073 1 384 0 -1
+ciMethod java/lang/Class isPrimitive ()Z 2049 1 256 0 -1
+ciMethod java/lang/Class getSuperclass ()Ljava/lang/Class; 2049 1 256 0 -1
+ciMethod java/lang/ref/Reference get ()Ljava/lang/Object; 1033 1 129 0 -1
+ciMethod java/lang/ref/Reference <init> (Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V 2057 1 31364 0 -1
+ciMethod java/lang/ref/SoftReference <init> (Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V 2097 1 1925 0 0
+ciMethod java/lang/ref/SoftReference get ()Ljava/lang/Object; 2049 1 38055 0 96
+ciMethod java/lang/ref/WeakReference <init> (Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V 2049 1 11129 0 96
+ciMethod java/lang/Thread currentThread ()Ljava/lang/Thread; 2049 1 256 0 -1
+ciMethod java/lang/Thread interrupt ()V 0 0 1 0 -1
+ciMethod java/lang/reflect/Method getReturnType ()Ljava/lang/Class; 1161 1 145 0 0
+ciMethod java/lang/reflect/Method getParameterTypes ()[Ljava/lang/Class; 3385 1 34141 0 256
+ciMethod java/lang/reflect/Constructor getParameterTypes ()[Ljava/lang/Class; 2065 1 6382 0 -1
+ciMethod sun/misc/Unsafe compareAndSwapInt (Ljava/lang/Object;JII)Z 2049 1 256 0 -1
+ciMethod sun/misc/Unsafe unpark (Ljava/lang/Object;)V 2049 1 256 0 -1
+ciMethod sun/misc/Unsafe getAndAddInt (Ljava/lang/Object;JI)I 2049 1 749 0 -1
+ciMethod java/util/List iterator ()Ljava/util/Iterator; 0 0 1 0 -1
+ciMethod java/util/List add (Ljava/lang/Object;)Z 0 0 1 0 -1
+ciMethod java/util/Iterator hasNext ()Z 0 0 1 0 -1
+ciMethod java/util/Iterator next ()Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/lang/ClassValue$ClassValueMap getCache ()[Ljava/lang/ClassValue$Entry; 2337 1 292 0 0
+ciMethod java/lang/ClassValue$ClassValueMap startEntry (Ljava/lang/ClassValue;)Ljava/lang/ClassValue$Entry; 2049 1 676 0 -1
+ciMethod java/lang/ClassValue$ClassValueMap finishEntry (Ljava/lang/ClassValue;Ljava/lang/ClassValue$Entry;)Ljava/lang/ClassValue$Entry; 2473 1 484 0 -1
+ciMethod java/lang/ClassValue$ClassValueMap loadFromCache ([Ljava/lang/ClassValue$Entry;I)Ljava/lang/ClassValue$Entry; 3921 1 5282 0 0
+ciMethod java/lang/ClassValue$ClassValueMap probeHomeLocation ([Ljava/lang/ClassValue$Entry;Ljava/lang/ClassValue;)Ljava/lang/ClassValue$Entry; 3833 1 5278 0 0
+ciMethod java/lang/ClassValue$ClassValueMap probeBackupLocations ([Ljava/lang/ClassValue$Entry;Ljava/lang/ClassValue;)Ljava/lang/ClassValue$Entry; 425 1 675 0 0
+ciMethod java/lang/ClassValue$ClassValueMap entryDislocation ([Ljava/lang/ClassValue$Entry;ILjava/lang/ClassValue$Entry;)I 0 0 1 0 -1
+ciMethod java/lang/ClassValue$ClassValueMap checkCacheLoad ()V 2049 1 714 0 -1
+ciMethod java/lang/ClassValue$ClassValueMap addToCache (Ljava/lang/ClassValue;Ljava/lang/ClassValue$Entry;)V 2049 1 714 0 -1
+ciMethod java/lang/ClassValue$ClassValueMap placeInCache ([Ljava/lang/ClassValue$Entry;ILjava/lang/ClassValue$Entry;Z)Ljava/lang/ClassValue$Entry; 3121 1 714 0 -1
+ciMethod java/util/WeakHashMap get (Ljava/lang/Object;)Ljava/lang/Object; 3081 241 2326 0 -1
+ciMethod java/util/WeakHashMap put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3073 81 6198 0 -1
+ciMethod java/util/concurrent/atomic/AtomicInteger incrementAndGet ()I 2049 1 5382 0 0
+ciMethodData java/lang/Object <init> ()V 2 982193 orig 264 88 29 165 115 0 0 0 0 128 4 231 22 0 0 0 0 32 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 137 213 119 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 3 0 1 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 data 0 oops 0
+ciMethod java/util/concurrent/ConcurrentHashMap remove (Ljava/lang/Object;)Ljava/lang/Object; 2057 1 5636 0 -1
+ciMethod java/util/concurrent/ConcurrentHashMap putIfAbsent (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3105 1 20469 0 -1
+ciMethod java/lang/ClassValue computeValue (Ljava/lang/Class;)Ljava/lang/Object; 0 0 1 0 -1
+ciMethod java/lang/ClassValue get (Ljava/lang/Class;)Ljava/lang/Object; 3489 1 5278 0 0
+ciMethod java/lang/ClassValue getCacheCarefully (Ljava/lang/Class;)[Ljava/lang/ClassValue$Entry; 3497 1 5278 0 0
+ciMethod java/lang/ClassValue getFromBackup ([Ljava/lang/ClassValue$Entry;Ljava/lang/Class;)Ljava/lang/Object; 425 1 628 0 0
+ciMethod java/lang/ClassValue castEntry (Ljava/lang/ClassValue$Entry;)Ljava/lang/ClassValue$Entry; 4017 1 5282 0 0
+ciMethod java/lang/ClassValue getFromHashMap (Ljava/lang/Class;)Ljava/lang/Object; 425 1 675 0 0
+ciMethod java/lang/ClassValue match (Ljava/lang/ClassValue$Entry;)Z 4097 1 5278 0 0
+ciMethod java/lang/ClassValue version ()Ljava/lang/ClassValue$Version; 1473 1 184 0 -1
+ciMethod java/lang/ClassValue getMap (Ljava/lang/Class;)Ljava/lang/ClassValue$ClassValueMap; 2049 1 694 0 -1
+ciMethod java/lang/ClassValue makeEntry (Ljava/lang/ClassValue$Version;Ljava/lang/Object;)Ljava/lang/ClassValue$Entry; 2473 1 484 0 -1
+ciMethod java/lang/ClassValue$Entry assertNotPromise ()V 4097 1 5524 0 0
+ciMethod java/lang/ClassValue$Entry value ()Ljava/lang/Object; 4097 1 5327 0 0
+ciMethod java/lang/ClassValue$Entry isPromise ()Z 3105 1 1368 0 -1
+ciMethod java/lang/ClassValue$Entry version ()Ljava/lang/ClassValue$Version; 3137 1 2338 0 -1
+ciMethod java/lang/ClassValue$Entry isLive ()Z 0 0 210 0 -1
+ciMethod java/lang/ClassValue$Entry refreshVersion (Ljava/lang/ClassValue$Version;)Ljava/lang/ClassValue$Entry; 0 0 201 0 -1
+ciMethod java/lang/ClassValue$Version promise ()Ljava/lang/ClassValue$Entry; 1081 1 135 0 -1
+ciMethodData java/util/concurrent/ConcurrentHashMap putIfAbsent (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 2 20545 orig 264 88 29 165 115 0 0 0 0 200 29 1 23 0 0 0 0 136 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 132 1 0 0 233 117 2 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 3 0 2 0 0 0 48 0 0 0 255 255 255 255 5 0 4 0 0 0 0 0 data 6 0x40005 0x0 0x233729c0 0x4ebd 0x0 0x0 oops 1

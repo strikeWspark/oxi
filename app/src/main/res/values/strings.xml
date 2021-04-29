@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Oxi</string>
+    <string name="verify">Verify OTP</string>
+    <string name="add_option">Add Option</string>
+    <string name="shop_name">Name of the Shop *</string>
+    <string name="upload">Upload</string>
+</resources>

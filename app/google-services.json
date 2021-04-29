@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "905605539110",
+    "project_id": "oxi-app-ff66f",
+    "storage_bucket": "oxi-app-ff66f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905605539110:android:c1f978275f55bb44c84de7",
+        "android_client_info": {
+          "package_name": "com.dryfire.oxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905605539110-u92tnibqmhqq5796ujn6nnvko32gu41b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dryfire.oxi",
+            "certificate_hash": "03dc63d534c2ceb01c4c22a9612f653e1740d68a"
+          }
+        },
+        {
+          "client_id": "905605539110-77bdcgt7q2uaaibsua21jbu8jcm8p7gk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv1qBif3X_MCV4wiyciy2b_QcdzG8fmfY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905605539110-77bdcgt7q2uaaibsua21jbu8jcm8p7gk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
