@@ -13,6 +13,7 @@ import com.dryfire.oxi.Adapter.OxygenRecyclerViewAdapter;
 import com.dryfire.oxi.Adapter.HomeViewPagerAdapter;
 import com.dryfire.oxi.Fragments.FabifluFragment;
 import com.dryfire.oxi.Fragments.OxygenFragment;
+import com.dryfire.oxi.Fragments.PlasmaFragment;
 import com.dryfire.oxi.Fragments.RemdesivirFragment;
 import com.dryfire.oxi.Model.Distributor;
 import com.dryfire.oxi.R;
@@ -64,38 +65,26 @@ public class MainActivity extends AppCompatActivity {
         homeViewPagerAdapter.addFragment(new OxygenFragment(),"Oxygen");
         homeViewPagerAdapter.addFragment(new RemdesivirFragment(),"Remdesivir");
         homeViewPagerAdapter.addFragment(new FabifluFragment(),"Fabiflu");
+        homeViewPagerAdapter.addFragment(new PlasmaFragment(),"Plasma");
         viewPager.setAdapter(homeViewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        RecyclerView.OnScrollListener onScrollListener = new RecyclerView.OnScrollListener() {
 
-            @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
 
-                if(dy > 0){
-                    distributorButton.shrink();
-                }else{
-                    distributorButton.extend();
-                }
-            }
-        };
 
-       // recyclerView.addOnScrollListener(onScrollListener);
 
 
         distributorButton.setOnClickListener((View v) -> {
 
+            Intent intent;
             if(mUser != null){
-                Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
+                intent = new Intent(getApplicationContext(), DashboardActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
 
             }else{
-                Intent intent = new Intent(getApplicationContext(), RegistrationActivity.class);
-
-
+                intent = new Intent(getApplicationContext(), RegistrationActivity.class);
             }
+            startActivity(intent);
 
         });
 

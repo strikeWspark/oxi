@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="8dp"
     android:foreground="?android:attr/selectableItemBackground"
     app:cardCornerRadius="@dimen/margin"
     android:layout_marginTop="@dimen/padding"
@@ -17,10 +16,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/oxi_cardremdesivir_shopName"
+            android:id="@+id/oxi_cardplasma_donorName"
             android:textSize="@dimen/cardTitleText"
             android:textColor="?attr/textcolor"
-            android:text="Shop Name: B Pharmacy"
+            android:text="Name: Justin Alex"
             android:layout_margin="@dimen/margin"
             android:padding="@dimen/padding"/>
 
@@ -30,19 +29,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/oxi_cardremdesivir_pricePerUnit"
-            android:layout_below="@+id/oxi_cardremdesivir_shopName"
+            android:id="@+id/oxi_cardplasma_city"
+            android:layout_below="@+id/oxi_cardplasma_donorName"
             android:textSize="@dimen/cardTitleText"
             android:textColor="?attr/textcolor"
-            android:text="Price: 3000/-"
+            android:text="City: Delhi/-"
             android:layout_margin="@dimen/margin"
             android:padding="@dimen/padding"/>
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/oxi_cardremdesivir_mobile"
-            android:layout_below="@+id/oxi_cardremdesivir_shopName"
+            android:id="@+id/oxi_cardplasma_mobile"
+            android:layout_below="@+id/oxi_cardplasma_donorName"
             android:layout_alignParentRight="true"
             android:text="call"
             android:backgroundTint="?attr/buttoncolor"
@@ -50,18 +49,7 @@
             android:layout_margin="@dimen/margin"
             android:padding="@dimen/padding"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/oxi_cardremdesivir_direction"
-            android:layout_below="@+id/oxi_cardremdesivir_shopName"
-            android:layout_toStartOf="@+id/oxi_cardremdesivir_mobile"
-            android:text="Direction"
-            android:backgroundTint="?attr/buttoncolor"
-            app:cornerRadius="@dimen/buttonRadius"
-            android:layout_margin="@dimen/margin"
-            android:padding="@dimen/padding"
-            android:visibility="invisible"/>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

@@ -54,6 +54,13 @@
                 android:layout_margin="@dimen/margin"
                 android:padding="@dimen/padding"/>
 
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/oxi_add_option_spinner"
+                android:layout_margin="@dimen/margin"
+                android:padding="@dimen/padding"/>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,6 +84,7 @@
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:hint="Aval. Cylinders"
+                    android:id="@+id/oxi_availInput"
                     android:layout_margin="@dimen/margin"
                     android:padding="@dimen/padding">
 
@@ -92,6 +100,7 @@
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:hint="Total Cylinders"
+                    android:id="@+id/oxi_capacityInput"
                     android:layout_margin="@dimen/margin"
                     android:padding="@dimen/padding">
 
@@ -157,7 +166,18 @@
                     android:maxLength="10"/>
 
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City *"
+                android:layout_margin="@dimen/margin"
+                android:padding="@dimen/padding">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/oxi_cityEdit" />
+            </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
