@@ -1,4 +1,4 @@
-package com.dryfire.oxi;
+package com.dryfire.oxi.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,15 +9,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.dryfire.oxi.Model.Distributor;
+import com.dryfire.oxi.R;
+
 import java.util.List;
 
 public class DistributorRecyclerViewAdapter extends RecyclerView.Adapter<DistributorRecyclerViewAdapter.MyViewHolder> {
     private Context context;
-    final private List<Distributer> distributerList;
+    final private List<Distributor> distributorList;
 
-    public DistributorRecyclerViewAdapter(Context context, List<Distributer> distributerList) {
+    public DistributorRecyclerViewAdapter(Context context, List<Distributor> distributorList) {
         this.context = context;
-        this.distributerList = distributerList;
+        this.distributorList = distributorList;
     }
 
     @NonNull
@@ -31,13 +34,13 @@ public class DistributorRecyclerViewAdapter extends RecyclerView.Adapter<Distrib
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.shopName.setText(distributerList.get(position).getShopName());
+        holder.shopName.setText(distributorList.get(position).getShopName());
 
     }
 
     @Override
     public int getItemCount() {
-        return distributerList.size();
+        return distributorList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

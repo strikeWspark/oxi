@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Oxi">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activities.MainActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,14 +18,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RegistrationActivity">
+        <activity android:name=".Activities.RegistrationActivity">
 
 
         </activity>
 
-        <activity android:name=".OTPVerifyScreen"/>
+        <activity android:name=".Activities.OTPVerifyScreen"/>
 
-        <activity android:name=".DashboardActivity">
+        <activity android:name=".Activities.DashboardActivity">
 
         </activity>
     </application>

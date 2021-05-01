@@ -30,47 +30,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="@dimen/textbox"
-            android:layout_height="@dimen/textbox"
-            android:background="@color/cardview_shadow_end_color"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"
+            android:hint="Enter OTP"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            android:layout_margin="@dimen/margin"
-            android:padding="@dimen/padding"/>
-
-        <TextView
-            android:layout_width="@dimen/textbox"
-            android:layout_height="@dimen/textbox"
-            android:background="@color/cardview_shadow_end_color"
-            android:layout_margin="@dimen/margin"
-            android:padding="@dimen/padding"/>
-        <TextView
-            android:layout_width="@dimen/textbox"
-            android:layout_height="@dimen/textbox"
-            android:background="@color/cardview_shadow_end_color"
-            android:layout_margin="@dimen/margin"
-            android:padding="@dimen/padding"/>
-        <TextView
-            android:layout_width="@dimen/textbox"
-            android:layout_height="@dimen/textbox"
-            android:background="@color/cardview_shadow_end_color"
-            android:layout_margin="@dimen/margin"
-            android:padding="@dimen/padding"/>
-        <TextView
-            android:layout_width="@dimen/textbox"
-            android:layout_height="@dimen/textbox"
-            android:background="@color/cardview_shadow_end_color"
-            android:layout_margin="@dimen/margin"
-            android:padding="@dimen/padding"/>
-        <TextView
-            android:layout_width="@dimen/textbox"
-            android:layout_height="@dimen/textbox"
-            android:background="@color/cardview_shadow_end_color"
-            android:layout_margin="@dimen/margin"
-            android:padding="@dimen/padding"/>
-
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/oxi_otp_verifyEdit"
+                android:maxLength="6"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
-
     <TextView
         android:id="@+id/resend_otp"
         android:layout_width="wrap_content"
@@ -81,5 +56,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.073" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resend_otp"
+        app:cornerRadius="@dimen/buttonRadius"
+        android:text="@string/verify"
+        android:backgroundTint="?attr/buttoncolor"
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/padding"
+        android:id="@+id/oxi_otp_verify_button">
+
+
+    </com.google.android.material.button.MaterialButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

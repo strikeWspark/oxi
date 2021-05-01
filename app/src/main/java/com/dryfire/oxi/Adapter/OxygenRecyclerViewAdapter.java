@@ -1,4 +1,4 @@
-package com.dryfire.oxi;
+package com.dryfire.oxi.Adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.dryfire.oxi.Model.Distributor;
+import com.dryfire.oxi.R;
 import com.google.android.material.button.MaterialButton;
 import com.razerdp.widget.animatedpieview.AnimatedPieView;
 import com.razerdp.widget.animatedpieview.AnimatedPieViewConfig;
@@ -17,20 +19,20 @@ import com.razerdp.widget.animatedpieview.data.SimplePieInfo;
 
 import java.util.List;
 
-public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeRecyclerViewAdapter.MyViewHolder> {
+public class OxygenRecyclerViewAdapter extends RecyclerView.Adapter<OxygenRecyclerViewAdapter.MyViewHolder> {
 
     private Context context;
-    private List<Distributer> distributerList;
+    private List<Distributor> distributorList;
 
-    public HomeRecyclerViewAdapter(Context context, List<Distributer> distributerList) {
+    public OxygenRecyclerViewAdapter(Context context, List<Distributor> distributorList) {
         this.context = context;
-        this.distributerList = distributerList;
+        this.distributorList = distributorList;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.home_recyclerview_card,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.oxygen_recyclerview_card,parent,false);
         return new MyViewHolder(v);
     }
 
@@ -48,27 +50,32 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<HomeRecyclerVi
         config.textSize(52);
         config.focusAlphaType(AnimatedPieViewConfig.FOCUS_WITH_ALPHA_REV);
         holder.animatedPieViewProbability.applyConfig(config).start();
-        holder.shopName.setText(distributerList.get(position).getShopName());
+        holder.shopName.setText(distributorList.get(position).getShopName());
+        if(distributorList.get(position).getAddress() != null){
+            holder.directionButton.setVisibility(View.VISIBLE);
+
+        }
     }
 
     @Override
     public int getItemCount() {
-        return distributerList.size();
+        return distributorList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView shopName,avail,price;
-        MaterialButton callButton;
+        MaterialButton callButton,directionButton;
         AnimatedPieView animatedPieViewProbability;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            shopName = itemView.findViewById(R.id.oxi_cardHome_shopName);
-            avail = itemView.findViewById(R.id.oxi_cardHome_available);
-            price = itemView.findViewById(R.id.oxi_cardHome_pricePerUnit);
-            callButton = itemView.findViewById(R.id.oxi_cardHome_mobile);
-            animatedPieViewProbability = itemView.findViewById(R.id.oxu_probability_piechart);
+            shopName = itemView.findViewById(R.id.oxi_cardOxygen_shopName);
+            avail = itemView.findViewById(R.id.oxi_cardOxygen_available);
+            price = itemView.findViewById(R.id.oxi_cardOxygen_pricePerUnit);
+            callButton = itemView.findViewById(R.id.oxi_cardOxygen_mobile);
+            directionButton = itemView.findViewById(R.id.oxi_cardOxygen_direction);
+            animatedPieViewProbability = itemView.findViewById(R.id.oxi_probability_piechart);
         }
     }
 }

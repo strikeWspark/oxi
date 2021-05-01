@@ -4,24 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity"
+    android:background="?attr/backgroundcolor">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/oxi_home_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/backgroundcolor"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="?attr/buttoncolor"
+            app:tabMode="fixed"
+            app:tabTextColor="?attr/textcolor" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/oxi_homeViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+<!--
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/oxi_home_recyclerView"/>
-
+        android:id="@+id/oxi_home_recyclerView"
+        android:background="?attr/backgroundcolor"/>
+-->
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/distributorButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/oxi_home_recyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/margin"
+        android:backgroundTint="?attr/colorAccent"
         android:padding="@dimen/padding"
+        android:text="Distributor?"
         android:textAlignment="center"
-        android:id="@+id/distributorButton"
-        android:text="Distributor?" />
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 

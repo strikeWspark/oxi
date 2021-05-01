@@ -1,8 +1,8 @@
-package com.dryfire.oxi;
+package com.dryfire.oxi.Model;
 
 import java.util.Objects;
 
-public class Distributer {
+public class Distributor {
 
 
     private String shopName;
@@ -11,14 +11,16 @@ public class Distributer {
     private float pricePerUnit;
     private long pincode;
     private long mobile;
+    private String address;
 
-    private Distributer(String shopName, int available, int capacity, float pricePerUnit, long pincode, long mobile) {
+    private Distributor(String shopName, int available, int capacity, float pricePerUnit, long pincode, long mobile, String address) {
         this.shopName = shopName;
         this.available = available;
         this.capacity = capacity;
         this.pricePerUnit = pricePerUnit;
         this.pincode = pincode;
         this.mobile = mobile;
+        this.address = address;
     }
 
     public static class Builder {
@@ -29,6 +31,7 @@ public class Distributer {
         private float pricePerUnit;
         private long pincode;
         private long mobile;
+        private String address;
 
         @Override
         public String toString() {
@@ -39,6 +42,7 @@ public class Distributer {
                     ", pricePerUnit=" + pricePerUnit +
                     ", pincode=" + pincode +
                     ", mobile=" + mobile +
+                    ", address=" + address+
                     '}';
         }
 
@@ -57,7 +61,7 @@ public class Distributer {
 
         @Override
         public int hashCode() {
-            return Objects.hash(shopName, available, capacity, pricePerUnit, pincode, mobile);
+            return Objects.hash(shopName, available, capacity, pricePerUnit, pincode, mobile,address);
         }
 
         public Builder setShopName(String shopName) {
@@ -90,8 +94,12 @@ public class Distributer {
             return this;
         }
 
-        public Distributer build(){
-            return  new Distributer(shopName,available,capacity,pricePerUnit,pincode,mobile);
+        public Builder setAddress(String address){
+            this.address = address;
+            return this;
+        }
+        public Distributor build(){
+            return  new Distributor(shopName,available,capacity,pricePerUnit,pincode,mobile,address);
         }
     }
 
@@ -117,5 +125,9 @@ public class Distributer {
 
     public long getMobile() {
         return mobile;
+    }
+
+    public String getAddress(){
+        return address;
     }
 }

@@ -3,8 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="5dp"
-    app:cardCornerRadius="@dimen/padding">
+    app:cardElevation="8dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/margin"
+    android:layout_marginTop="@dimen/padding"
+    android:background="?attr/cardbackground"
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,9 +17,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/oxi_cardHome_shopName"
+            android:id="@+id/oxi_cardOxygen_shopName"
             android:textSize="@dimen/cardTitleText"
-            android:textColor="@color/cardview_dark_background"
+            android:textColor="?attr/textcolor"
             android:text="Shop Name: Oxi Cylinders"
             android:layout_margin="@dimen/margin"
             android:padding="@dimen/padding"/>
@@ -24,10 +28,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/oxi_cardHome_available"
+            android:id="@+id/oxi_cardOxygen_available"
             android:textSize="@dimen/cardTitleText"
-            android:layout_below="@+id/oxi_cardHome_shopName"
-            android:textColor="@color/cardview_dark_background"
+            android:layout_below="@+id/oxi_cardOxygen_shopName"
+            android:textColor="?attr/textcolor"
             android:text="Available: 23 Units"
             android:layout_margin="@dimen/margin"
             android:padding="@dimen/padding"/>
@@ -35,20 +39,20 @@
         <com.razerdp.widget.animatedpieview.AnimatedPieView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_below="@id/oxi_cardHome_shopName"
+            android:layout_below="@id/oxi_cardOxygen_shopName"
             android:layout_marginRight="@dimen/margin"
             android:layout_alignParentRight="true"
-            android:id="@+id/oxu_probability_piechart"/>
+            android:id="@+id/oxi_probability_piechart"/>
 
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/oxi_cardHome_pricePerUnit"
-            android:layout_below="@+id/oxi_cardHome_available"
+            android:id="@+id/oxi_cardOxygen_pricePerUnit"
+            android:layout_below="@+id/oxi_cardOxygen_available"
             android:textSize="@dimen/cardTitleText"
-            android:textColor="@color/cardview_dark_background"
+            android:textColor="?attr/textcolor"
             android:text="Price: 1500/-"
             android:layout_margin="@dimen/margin"
             android:padding="@dimen/padding"/>
@@ -56,13 +60,27 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/oxi_cardHome_mobile"
-            android:layout_below="@+id/oxi_cardHome_pricePerUnit"
+            android:id="@+id/oxi_cardOxygen_mobile"
+            android:layout_below="@+id/oxi_cardOxygen_pricePerUnit"
             android:layout_alignParentLeft="true"
             android:text="call"
+            android:backgroundTint="?attr/buttoncolor"
             app:cornerRadius="@dimen/buttonRadius"
             android:layout_margin="@dimen/margin"
             android:padding="@dimen/padding"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/oxi_cardOxygen_direction"
+            android:layout_below="@+id/oxi_cardOxygen_pricePerUnit"
+            android:layout_toEndOf="@+id/oxi_cardOxygen_mobile"
+            android:text="Direction"
+            android:backgroundTint="?attr/buttoncolor"
+            app:cornerRadius="@dimen/buttonRadius"
+            android:layout_margin="@dimen/margin"
+            android:padding="@dimen/padding"
+            android:visibility="invisible"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

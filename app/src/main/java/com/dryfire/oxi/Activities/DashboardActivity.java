@@ -1,4 +1,4 @@
-package com.dryfire.oxi;
+package com.dryfire.oxi.Activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.dryfire.oxi.Adapter.DistributorRecyclerViewAdapter;
+import com.dryfire.oxi.Model.Distributor;
+import com.dryfire.oxi.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -24,7 +27,7 @@ public class DashboardActivity extends AppCompatActivity {
     private TextInputEditText edit;
     private RecyclerView recyclerView;
     private DistributorRecyclerViewAdapter adapter;
-    private List<Distributer> distributerList;
+    private List<Distributor> distributorList;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,14 +35,14 @@ public class DashboardActivity extends AppCompatActivity {
 
         View bottomSheet = findViewById(R.id.oxi_add_option_bottomSheet);
 
-        distributerList = new ArrayList<>();
+        distributorList = new ArrayList<>();
         mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
 
         addOption = findViewById(R.id.oxi_addOption);
         uploadButton = findViewById(R.id.uploadButton);
         edit = findViewById(R.id.oxi_shopNamEdit);
         recyclerView = findViewById(R.id.oxi_add_shops);
-        adapter = new DistributorRecyclerViewAdapter(this,distributerList);
+        adapter = new DistributorRecyclerViewAdapter(this, distributorList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         addOption.setOnClickListener((View v) ->{
 
@@ -49,10 +52,10 @@ public class DashboardActivity extends AppCompatActivity {
         uploadButton.setOnClickListener((View v) -> {
 
             String name = edit.getText().toString().trim();
-            distributerList.add(new Distributer.Builder().setShopName(name).build());
+            distributorList.add(new Distributor.Builder().setShopName(name).build());
             mBottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
 
-            Toast.makeText(DashboardActivity.this, ""+ distributerList.get(0).getShopName(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(DashboardActivity.this, ""+ distributorList.get(0).getShopName(), Toast.LENGTH_SHORT).show();
             recyclerView.setAdapter(adapter);
 
 
